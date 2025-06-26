@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+    mysql_alt:
+        image: mysql:8.0
+        container_name: mysql_for_laravel_orgs
+        restart: unless-stopped
+        ports:
+            - "33060:3306"
+        environment:
+            MYSQL_DATABASE: laravel_organizations
+            MYSQL_USER: laravel
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: root
+        volumes:
+            - mysql_data_alt:/var/lib/mysql
+
+volumes:
+    mysql_data_alt:
