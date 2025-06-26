@@ -1,8 +1,9 @@
     
 1. Клонируйте репозиторий:
 ``` bash
-git clone <URL_вашего_репозитория>
+git clone git@github.com:a-kosimov/organizations_directory.git
 cd organizations-directory
+cp .env.example env
 ```
 2.Конфигурация env
 
